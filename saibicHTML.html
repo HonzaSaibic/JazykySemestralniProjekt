@@ -1,0 +1,517 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="author" content="Jan Saibic"> 
+  <title>Jazyky dokumentace - Jan Saibic</title>    
+  <style type="text/css">
+		  body{
+			  padding: 2%
+		  }
+	</style>    
+</head>
+  <body>
+    <header>
+      <h1>Semestrální projekt pro Značkovací jazyky - Dokumentace</h1>
+      <h3>Jan Saibic</h3>
+    </header>
+    <nav>
+      <h2>Obsah</h2>
+      <ul>
+        <li><a href="#uvod">Úvod</a></li>
+        <li><a href="#metodika">Metodika</a></li>
+        <li><a href="#popisElementu">Popis elementů</a></li>
+        <li><a href="#popisTransformace">Popis transformace</a></li>
+        <li><a href="#zaver">Závěr</a></li>
+      </ul>
+    </nav>
+    <main>
+      <section id="uvod"> 
+        <article>   
+          <h2>Úvod</h2>
+          <p>
+          Pro svůj semestrální projekt jsem zvolil fiktivní herní nastavení. Toto 
+          téma jsem zvolil, jelikož hry jsou v dnešní době velmi populární a 
+          často se toto řešení využívá.<br />
+          XML soubor obsahuje systémové nastavení pro všechny účty a následně 
+          jednotlivá další nastavení pro každý účet jedinečné.
+          </p>
+        </article>
+      </section>
+      <section id="metodika">
+        <article>
+          <h2>Metodika</h2>
+          <p>
+          Pro tvorbu tohoto semestrálního projektu jsem použil program <strong>PSPad</strong>.<br /> 
+          Jako zdroj informací jsem vyžíval převážně stránku <a href="https://www.w3schools.com/" target="_blank">w3schools.com</a>. <br /> 
+          Jako validátor jsem používal <a href="https://validator.w3.org/" target="_blank">validator.w3.org</a>,
+          nebo <a href="http://www.xmlvalidation.com/" target="_blank">xmlvalidation.com</a> 
+          </p>                                                
+        </article>
+      </section>
+      <section id="popisElementu">
+        <article>
+          <h2>Popis elementů a atributů</h2>
+            <h3>Elementy</h3>
+            <table border="1" id="elementy" title="Elementy">
+              <tr>
+                <td><strong>Označení</strong></td>
+                <td><strong>K čemu slouží?</strong></td>
+                <td><strong>Možné hodnoty</strong></td>
+              </tr>
+              <tr>
+                <td>system</td>
+                <td>Slouží jako obal pro systémové nastavení</td>
+                <td>Není nijak definováno</td>
+              </tr>
+              <tr>
+                <td>graphics</td>
+                <td>Obal nesoucí v sobě grafické nastavení</td>
+                <td>Není nijak definováno</td>
+              </tr>
+              <tr>
+                <td>resolution</td>
+                <td>Rozlišení obrazovky</td>
+                <td>Rozmezí rozlišení od 640x480 do 1920x1080</td>
+              </tr>
+              <tr>
+                <td>verticalSync</td>
+                <td>Zapnutý či vypnutý vertical sync</td>
+                <td>0,1</td>
+              </tr>
+              <tr>
+                <td>graphicsQuality</td>
+                <td>Nastavení kvality grafických prvků</td>
+                <td>1-10</td>
+              </tr>
+              <tr>
+                <td>viewDistance</td>
+                <td>Vzdálenost vykreslování objektů</td>
+                <td>1-10</td>
+              </tr>
+              <tr>
+                <td>environmentDetail</td>
+                <td>Kvalita grafiky okolí</td>
+                <td>1-10</td>
+              </tr>
+              <tr>
+                <td>groundClutter</td>
+                <td>Kvalita počasí ve hře</td>
+                <td>1-10</td>
+              </tr>
+              <tr>
+                <td>shadowQuality</td>
+                <td>Kvalita stínů</td>
+                <td>Low,Good,High</td>
+              </tr>
+              <tr>
+                <td>liquidDetail</td>
+                <td>Kvalita vody</td>
+                <td>Low,Good,High</td>
+              </tr>
+              <tr>
+                <td>lightningQuality</td>
+                <td>Kvalita světelných efektů</td>
+                <td>Low,Good,High</td>
+              </tr>
+              <tr>
+                <td>textureResolution</td>
+                <td>Rozlišení textur</td>
+                <td>Low,Good,High</td>
+              </tr>
+              <tr>
+                <td>advanced</td>
+                <td>Obal pro pokročilé nastavení</td>
+                <td>Není definováno</td>
+              </tr>                
+              <tr>
+                <td>trippleBuffering</td>
+                <td>Zapnutý či vypnutý Tripple Buffering</td>
+                <td>0,1</td>
+              </tr>
+              <tr>
+                <td>reduceInputLag</td>
+                <td>Zapnutý či vypnutý Reduce Input Lag</td>
+                <td>0,1</td>
+              </tr>
+              <tr>
+                <td>maxForegroundFps</td>
+                <td>Nastavení maximálního FPS na popředí</td>
+                <td>0-150</td>
+              </tr>
+              <tr>
+                <td>maxBackgroundFps</td>
+                <td>Nastavení maximálního FPS na pozadí</td>
+                <td>0-150</td>
+              </tr>
+              <tr>
+                <td>uiScale</td>
+                <td>Velikost UI</td>
+                <td>0-200%</td>
+              </tr>
+              <tr>
+                <td>network</td>
+                <td>Obal pro nastavení network</td>
+                <td>Není definováno</td>
+              </tr>
+              <tr>
+                <td>optimizeNetworkForSpeed</td>
+                <td>Zapnutá či vypnutá optimalizace rychlosti internetu</td>
+                <td>0,1</td>
+              </tr>
+              <tr>
+                <td>enableIpv6WhenAvailable</td>
+                <td>Podpora IPv6</td>
+                <td>0,1</td>
+              </tr>
+              <tr>
+                <td>advancedCombatLogging</td>
+                <td>Pokročilé logování boje</td>
+                <td>0,1</td>
+              </tr>
+              <tr>
+                <td>languages</td>
+                <td>Obal pro nastavení lokalizace</td>
+                <td>Není definováno</td>
+              </tr>
+              <tr>
+                <td>text</td>
+                <td>Nastavení jazyka pro text</td>
+                <td>English,Germany,Czech</td>
+              </tr>
+              <tr>
+                <td>audio</td>
+                <td>Nastavení jazyka pro audio</td>
+                <td>English,Germany,Czech</td>
+              </tr>
+              <tr>
+                <td>sound</td>
+                <td>Obal pro nastaveni zvuku</td>
+                <td>Není definováno</td>
+              </tr>
+              <tr>
+                <td>masterVolume</td>
+                <td>Hlasitou všech zvuků</td>
+                <td>0-100%</td>
+              </tr>
+              <tr>
+                <td>music</td>
+                <td>Hlasitost hudby</td>
+                <td>0-100%</td>
+              </tr>
+              <tr>
+                <td>ambience</td>
+                <td>Hlasitost prostředí </td>
+                <td>0-100%</td>
+              </tr>
+              <tr>
+                <td>dialog</td>
+                <td>Hlasitost dialogů</td>
+                <td>0-100%</td>
+              </tr>
+              <tr>
+                <td>soundInBackground</td>
+                <td>Přehrávání zvuků i s aplikací na pozadí</td>
+                <td>0,1</td>
+              </tr>
+              <tr>
+                <td>distanceFiltering</td>
+                <td>Filtrování zvuků podle vzdálenosti</td>
+                <td>0,1</td>
+              </tr>
+              <tr>
+                <td>emoteSounds</td>
+                <td>Emote zvuky</td>
+                <td>0,1</td>
+              </tr>
+              <tr>
+                <td>errorSpeech</td>
+                <td>Hlášení o problémech</td>
+                <td>0,1</td>
+              </tr>
+              <tr>
+                <td>addOns</td>
+                <td>Obal pro addony</td>
+                <td>Není definováno</td>
+              </tr>
+              <tr>
+                <td>addOn</td>
+                <td>Obal pro nastavení addOnů</td>
+                <td>Není definováno</td>
+              </tr>
+              <tr>
+                <td>active</td>
+                <td>Aktivní nebo neaktivní</td>
+                <td>0,1</td>
+              </tr>
+              <tr>
+                <td>accounts</td>
+                <td>Obal pro jednotlivé accounty</td>
+                <td>Není definováno</td>
+              </tr>
+              <tr>
+                <td>account</td>
+                <td>Obal pro konkrétní nastavení účtu</td>
+                <td>Není definováno</td>
+              </tr>
+              <tr>
+                <td>interface</td>
+                <td>Obal pro nastavení jednotlivých částí interface</td>
+                <td>Není definováno</td>
+              </tr>
+              <tr>
+                <td>controls</td>
+                <td>Obal pro nastavení části controls</td>
+                <td>Není definováno</td>
+              </tr>
+              <tr>
+                <td>stickyTargeting</td>
+                <td>Zapnuté nebo vypnuté přichycení na cíl</td>
+                <td>0,1</td>
+              </tr>
+              <tr>
+                <td>autoLoot</td>
+                <td>Automatické sbíraní</td>
+                <td>0,1</td>
+              </tr>
+              <tr>
+                <td>interactOnLeftClick</td>
+                <td>Interakce na při kliknutí levého tlačítka myši</td>
+                <td>0,1</td>
+              </tr>
+              <tr>
+                <td>openLootWindowAtMouse</td>
+                <td>Otevření okna na pozici myši</td>
+                <td>0,1</td>
+              </tr>
+              <tr>
+                <td>autoCancelAwayMode</td>
+                <td>Automatické zrušení AFK módu</td>
+                <td>0,1</td>
+              </tr>
+              <tr>
+                <td>social</td>
+                <td>Obal pro social nastavení</td>
+                <td>Není definováno</td>
+              </tr>
+              <tr>
+                <td>matureLanguageFilter</td>
+                <td>Filter nevhodných slov</td>
+                <td>0,1</td>
+              </tr>
+              <tr>
+                <td>spamFilter</td>
+                <td>Filter spamu</td>
+                <td>0,1</td>
+              </tr>
+              <tr>
+                <td>blockTrades</td>
+                <td>Blokování výměnného okna</td>
+                <td>0,1</td>
+              </tr>
+              <tr>
+                <td>blockGuildInvites</td>
+                <td>Blokování pozvání do guildy</td>
+                <td>0,1</td>
+              </tr>
+              <tr>
+                <td>onlineFriends</td>
+                <td>Ukazovnání přítel, které jsou online</td>
+                <td>0,1</td>
+              </tr>
+              <tr>
+                <td>offlineFriends</td>
+                <td>Ukazovnání přítel, které jsou offline</td>
+                <td>0,1</td>
+              </tr>
+              <tr>
+                <td>showToastWindow</td>
+                <td>Ukazování toast notifikací</td>
+                <td>0,1</td>
+              </tr>
+              <tr>
+                <td>actionbars</td>
+                <td>Obal pro nastavení zobrazování actionbars</td>
+                <td>Není definováno</td>
+              </tr>
+              <tr>
+                <td>bottomLeftBar</td>
+                <td>Zobrazení levého spodního baru</td>
+                <td>0,1</td>
+              </tr>
+              <tr>
+                <td>bottomRightBar</td>
+                <td>Zobrazení pravého spodního baru</td>
+                <td>0,1</td>
+              </tr>
+              <tr>
+                <td>rightBar</td>
+                <td>Zobrazení pravého prvního baru</td>
+                <td>0,1</td>
+              </tr>
+              <tr>
+                <td>rightBar2</td>
+                <td>Zobrazení pravého druhého baru</td>
+                <td>0,1</td>
+              </tr>
+              <tr>
+                <td>lockActionbars</td>
+                <td>Uzamčení actionbars</td>
+                <td>0,1</td>
+              </tr>
+              <tr>
+                <td>showNumbersForCooldowns</td>
+                <td>Zobrazení čísel, označující dobu do konce obnovy schopnosti</td>
+                <td>0,1</td>
+              </tr>
+              <tr>
+                <td>keyBindings</td>
+                <td>Obal pro nastavení kláves</td>
+                <td>Není Definováno</td>
+              </tr>
+              <tr>
+                <td>movementKeys</td>
+                <td>Obal pro nastavení kláves pro pohyb</td>
+                <td>Není definováno</td>
+              </tr>
+              <tr>
+                <td>moveForward</td>
+                <td>Chůze vpřed</td>
+                <td>A-Z, 1-9, Not Bound, Arrows, Spacebar, Enter</td>
+              </tr>
+              <tr>
+                <td>moveBackward</td>
+                <td>Chůze vzad</td>
+                <td>A-Z, 1-9, Not Bound, Arrows, Spacebar, Enter</td>
+              </tr>
+              <tr>
+                <td>turnLeft</td>
+                <td>Zatočení vlevo</td>
+                <td>A-Z, 1-9, Not Bound, Arrows, Spacebar, Enter</td>
+              </tr>
+              <tr>
+                <td>turnRight</td>
+                <td>Zatočení vpravo</td>
+                <td>A-Z, 1-9, Not Bound, Arrows, Spacebar, Enter</td>
+              </tr>
+              <tr>
+                <td>strafeLeft</td>
+                <td>Chůze vlevo</td>
+                <td>A-Z, 1-9, Not Bound, Arrows, Spacebar, Enter</td>
+              </tr>
+              <tr>
+                <td>strafeRight</td>
+                <td>Chůze vpravo</td>
+                <td>A-Z, 1-9, Not Bound, Arrows, Spacebar, Enter</td>
+              </tr>
+              <tr>
+                <td>jump</td>
+                <td>Skok</td>
+                <td>A-Z, 1-9, Not Bound, Arrows, Spacebar, Enter</td>
+              </tr>
+              <tr>
+                <td>chat</td>
+                <td>Obal pro nastavení chatu</td>
+                <td>Není definováno</td>
+              </tr>
+              <tr>
+                <td>openChat</td>
+                <td>Otevření chatu</td>
+                <td>A-Z, 1-9, Not Bound, Arrows, Spacebar, Enter</td>
+              </tr>
+              <tr>
+                <td>chatReply</td>
+                <td>Odpověd na zprávu v chatu</td>
+                <td>A-Z, 1-9, Not Bound, Arrows, Spacebar, Enter</td>
+              </tr>
+              <tr>
+                <td>actionBar</td>
+                <td>Obal pro nastavení kláves na actionbars</td>
+                <td>Není definováno</td>
+              </tr>
+              <tr>
+                <td>actionButton1</td>
+                <td>Nastavení tlačítka Action button1</td>
+                <td>A-Z, 1-9, Not Bound, Arrows, Spacebar, Enter</td>
+              </tr>
+              <tr>
+                <td>actionButton2</td>
+                <td>Nastavení tlačítka Action button2</td>
+                <td>A-Z, 1-9, Not Bound, Arrows, Spacebar, Enter</td>
+              </tr>
+              <tr>
+                <td>actionButton3</td>
+                <td>Nastavení tlačítka Action button3</td>
+                <td>A-Z, 1-9, Not Bound, Arrows, Spacebar, Enter</td>
+              </tr>
+              <tr>
+                <td>actionButton4</td>
+                <td>Nastavení tlačítka Action button4</td>
+                <td>A-Z, 1-9, Not Bound, Arrows, Spacebar, Enter</td>
+              </tr>
+              <tr>
+                <td>actionButton5</td>
+                <td>Nastavení tlačítka Action button5</td>
+                <td>A-Z, 1-9, Not Bound, Arrows, Spacebar, Enter</td>
+              </tr>
+              <tr>
+                <td>actionButton6</td>
+                <td>Nastavení tlačítka Action button6</td>
+                <td>A-Z, 1-9, Not Bound, Arrows, Spacebar, Enter</td>
+              </tr>
+              <tr>
+                <td>actionButton7</td>
+                <td>Nastavení tlačítka Action button7</td>
+                <td>A-Z, 1-9, Not Bound, Arrows, Spacebar, Enter</td>
+              </tr>
+            </table>
+            <h2>Atributy</h2>
+            <table border="1" id="Atributy" title="Atributy">
+              <tr>
+                <td><strong>Označení</strong></td>
+                <td><strong>Popis</strong></td>
+              </tr>
+              <tr>
+                <td>addonName</td>
+                <td>Určuje název konkrétního addonu</td>
+              </tr>
+              <tr>
+                <td>client</td>
+                <td>Určuje, zda-li je účet pro EU nebo NA clienta</td>
+              </tr>
+              <tr>
+                <td>server</td>
+                <td>Označuje název serveru, na kterém je účet vytvořen</td>
+              </tr>
+              <tr>
+                <td>id</td>
+                <td>Určuje identifikační číslo účtu</td>
+              </tr>
+            </table>
+        </article>
+      </section>
+      <section id="popisTransformace">
+        <article>
+          <h2>Popis transformace</h2>
+          <p> blabla
+          </p>
+        </article>
+      </section>
+      <section id="zaver">
+        <article>
+          <h2>Závěr</h2>
+          <p>
+          Při zpracování tohoto projektu jsem si osvojil práci s jazykem XML, který je velmi populární a rozšířený.
+          Jeho znalosti mi velmi prospějí. <br />
+          Pokud bych měl dělat kompletní nastavení hry v XML, určitě by bylo potřeba jej lépe zpracovat a jinak ošetřit.
+          </p>
+        </article>
+      </section>
+    </main>   
+    <footer>
+      <p> 
+      Zpracoval: Jan Saibic | Kontaktní email: xsaij001@studenti.czu.cz
+      </p>
+    </footer>
+  </body>
+</html>
