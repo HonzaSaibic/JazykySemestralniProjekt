@@ -1,4 +1,5 @@
 <!DOCTYPE HTML>
+<!-- https://github.com/HonzaSaibic/JazykySemestralniProjekt/blob/master/saibicHTML.html -->
 <html>
 <head>
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
@@ -34,7 +35,8 @@
           téma jsem zvolil, jelikož hry jsou v dnešní době velmi populární a 
           často se toto řešení využívá.<br />
           XML soubor obsahuje systémové nastavení pro všechny účty a následně 
-          jednotlivá další nastavení pro každý účet jedinečné.
+          jednotlivá další nastavení pro každý účet jedinečné. Stejná struktura nastavení 
+          a jednotlivé názvy nastavení jsou převzaty ze hry World of Warcraft.
           </p>
         </article>
       </section>
@@ -43,15 +45,25 @@
           <h2>Metodika</h2>
           <p>
           Pro tvorbu tohoto semestrálního projektu jsem použil program <strong>PSPad</strong>.<br /> 
-          Jako zdroj informací jsem vyžíval převážně stránku <a href="https://www.w3schools.com/" target="_blank">w3schools.com</a>. <br /> 
-          Jako validátor jsem používal <a href="https://validator.w3.org/" target="_blank">validator.w3.org</a>,
-          nebo <a href="http://www.xmlvalidation.com/" target="_blank">xmlvalidation.com</a> 
+          Jako zdroj informací jsem vyžíval převážně stránku <a href="https://www.w3schools.com/" target="_blank">www.w3schools.com</a>. <br /> 
+          Jako validátor jsem používal <a href="https://validator.w3.org/" target="_blank">www.validator.w3.org</a>,
+          nebo <a href="http://www.xmlvalidation.com/" target="_blank">xmlvalidation.com</a> <br />
+          Pro validaci XML oproti XML schematu jsem použil 
+          <a href="http://www.xmlvalidation.com/" target="_blank">www.xmlvalidation.com</a>. <br />
+          Pro validaci a spuštění transformace jsem použil 
+          <a href="http://www.freeformatter.com/xsl-transformer.html" target="_blank">www.freeformatter.com</a>.
           </p>                                                
         </article>
       </section>
       <section id="popisElementu">
         <article>
           <h2>Popis elementů a atributů</h2>
+            <p>
+            V následující tabulce Elementy jsou popsané všechny elementy obsažené v XML. 
+            Máme zde označení poté popis, k čemu daný element slouží a poté
+            všechny možné hodnoty, které může element obsahovat. V tabulce Atributy jsou 
+            obsaženy použíté atributy a jejich význam.
+            </p>
             <h3>Elementy</h3>
             <table border="1" id="elementy" title="Elementy">
               <tr>
@@ -71,33 +83,33 @@
               </tr>
               <tr>
                 <td>resolution</td>
-                <td>Rozlišení obrazovky</td>
+                <td>Nastavení rozlišení obrazovky</td>
                 <td>Rozmezí rozlišení od 640x480 do 1920x1080</td>
               </tr>
               <tr>
                 <td>verticalSync</td>
-                <td>Zapnutý či vypnutý vertical sync</td>
-                <td>0,1</td>
+                <td>Zda-li je zapnutý či vypnutý vertical sync</td>
+                <td>0 = vypnutý , 1 = zapnutý</td>
               </tr>
               <tr>
                 <td>graphicsQuality</td>
                 <td>Nastavení kvality grafických prvků</td>
-                <td>1-10</td>
+                <td>V rozmezí od 1-10</td>
               </tr>
               <tr>
                 <td>viewDistance</td>
                 <td>Vzdálenost vykreslování objektů</td>
-                <td>1-10</td>
+                <td>V rozmezí od 1-10</td>
               </tr>
               <tr>
                 <td>environmentDetail</td>
                 <td>Kvalita grafiky okolí</td>
-                <td>1-10</td>
+                <td>V rozmezí od 1-10</td>
               </tr>
               <tr>
                 <td>groundClutter</td>
                 <td>Kvalita počasí ve hře</td>
-                <td>1-10</td>
+                <td>V rozmezí od 1-10</td>
               </tr>
               <tr>
                 <td>shadowQuality</td>
@@ -127,27 +139,27 @@
               <tr>
                 <td>trippleBuffering</td>
                 <td>Zapnutý či vypnutý Tripple Buffering</td>
-                <td>0,1</td>
+                <td>0 = vypnutý , 1 = zapnutý</td>
               </tr>
               <tr>
                 <td>reduceInputLag</td>
                 <td>Zapnutý či vypnutý Reduce Input Lag</td>
-                <td>0,1</td>
+                <td>0 = vypnutý , 1 = zapnutý</td>
               </tr>
               <tr>
                 <td>maxForegroundFps</td>
                 <td>Nastavení maximálního FPS na popředí</td>
-                <td>0-150</td>
+                <td>V rozmezí od 0-150</td>
               </tr>
               <tr>
                 <td>maxBackgroundFps</td>
                 <td>Nastavení maximálního FPS na pozadí</td>
-                <td>0-150</td>
+                <td>V rozmezí od 0-150</td>
               </tr>
               <tr>
                 <td>uiScale</td>
                 <td>Velikost UI</td>
-                <td>0-200%</td>
+                <td>V rozmezí od 0-200%</td>
               </tr>
               <tr>
                 <td>network</td>
@@ -157,17 +169,17 @@
               <tr>
                 <td>optimizeNetworkForSpeed</td>
                 <td>Zapnutá či vypnutá optimalizace rychlosti internetu</td>
-                <td>0,1</td>
+                <td>0 = vypnutý , 1 = zapnutý</td>
               </tr>
               <tr>
                 <td>enableIpv6WhenAvailable</td>
                 <td>Podpora IPv6</td>
-                <td>0,1</td>
+                <td>0 = vypnutý , 1 = zapnutý</td>
               </tr>
               <tr>
                 <td>advancedCombatLogging</td>
                 <td>Pokročilé logování boje</td>
-                <td>0,1</td>
+                <td>0 = vypnutý , 1 = zapnutý</td>
               </tr>
               <tr>
                 <td>languages</td>
@@ -177,12 +189,12 @@
               <tr>
                 <td>text</td>
                 <td>Nastavení jazyka pro text</td>
-                <td>English,Germany,Czech</td>
+                <td>Výběr z jazyků English,Germany,Czech</td>
               </tr>
               <tr>
                 <td>audio</td>
                 <td>Nastavení jazyka pro audio</td>
-                <td>English,Germany,Czech</td>
+                <td>Výběr z jazyků English,Germany,Czech</td>
               </tr>
               <tr>
                 <td>sound</td>
@@ -192,42 +204,42 @@
               <tr>
                 <td>masterVolume</td>
                 <td>Hlasitou všech zvuků</td>
-                <td>0-100%</td>
+                <td>V rozmezí od 0-100%</td>
               </tr>
               <tr>
                 <td>music</td>
                 <td>Hlasitost hudby</td>
-                <td>0-100%</td>
+                <td>V rozmezí od 0-100%</td>
               </tr>
               <tr>
                 <td>ambience</td>
                 <td>Hlasitost prostředí </td>
-                <td>0-100%</td>
+                <td>V rozmezí od 0-100%</td>
               </tr>
               <tr>
                 <td>dialog</td>
                 <td>Hlasitost dialogů</td>
-                <td>0-100%</td>
+                <td>V rozmezí od 0-100%</td>
               </tr>
               <tr>
                 <td>soundInBackground</td>
                 <td>Přehrávání zvuků i s aplikací na pozadí</td>
-                <td>0,1</td>
+                <td>0 = vypnutý , 1 = zapnutý</td>
               </tr>
               <tr>
                 <td>distanceFiltering</td>
                 <td>Filtrování zvuků podle vzdálenosti</td>
-                <td>0,1</td>
+                <td>0 = vypnutý , 1 = zapnutý</td>
               </tr>
               <tr>
                 <td>emoteSounds</td>
                 <td>Emote zvuky</td>
-                <td>0,1</td>
+                <td>0 = vypnutý , 1 = zapnutý</td>
               </tr>
               <tr>
                 <td>errorSpeech</td>
                 <td>Hlášení o problémech</td>
-                <td>0,1</td>
+                <td>0 = vypnutý , 1 = zapnutý</td>
               </tr>
               <tr>
                 <td>addOns</td>
@@ -242,7 +254,7 @@
               <tr>
                 <td>active</td>
                 <td>Aktivní nebo neaktivní</td>
-                <td>0,1</td>
+                <td>0 = vypnutý , 1 = zapnutý</td>
               </tr>
               <tr>
                 <td>accounts</td>
@@ -267,27 +279,27 @@
               <tr>
                 <td>stickyTargeting</td>
                 <td>Zapnuté nebo vypnuté přichycení na cíl</td>
-                <td>0,1</td>
+                <td>0 = vypnutý , 1 = zapnutý</td>
               </tr>
               <tr>
                 <td>autoLoot</td>
                 <td>Automatické sbíraní</td>
-                <td>0,1</td>
+                <td>0 = vypnutý , 1 = zapnutý</td>
               </tr>
               <tr>
                 <td>interactOnLeftClick</td>
                 <td>Interakce na při kliknutí levého tlačítka myši</td>
-                <td>0,1</td>
+                <td>0 = vypnutý , 1 = zapnutý</td>
               </tr>
               <tr>
                 <td>openLootWindowAtMouse</td>
                 <td>Otevření okna na pozici myši</td>
-                <td>0,1</td>
+                <td>0 = vypnutý , 1 = zapnutý</td>
               </tr>
               <tr>
                 <td>autoCancelAwayMode</td>
                 <td>Automatické zrušení AFK módu</td>
-                <td>0,1</td>
+                <td>0 = vypnutý , 1 = zapnutý</td>
               </tr>
               <tr>
                 <td>social</td>
@@ -297,37 +309,37 @@
               <tr>
                 <td>matureLanguageFilter</td>
                 <td>Filter nevhodných slov</td>
-                <td>0,1</td>
+                <td>0 = vypnutý , 1 = zapnutý</td>
               </tr>
               <tr>
                 <td>spamFilter</td>
                 <td>Filter spamu</td>
-                <td>0,1</td>
+                <td>0 = vypnutý , 1 = zapnutý</td>
               </tr>
               <tr>
                 <td>blockTrades</td>
                 <td>Blokování výměnného okna</td>
-                <td>0,1</td>
+                <td>0 = vypnutý , 1 = zapnutý</td>
               </tr>
               <tr>
                 <td>blockGuildInvites</td>
                 <td>Blokování pozvání do guildy</td>
-                <td>0,1</td>
+                <td>0 = vypnutý , 1 = zapnutý</td>
               </tr>
               <tr>
                 <td>onlineFriends</td>
                 <td>Ukazovnání přítel, které jsou online</td>
-                <td>0,1</td>
+                <td>0 = vypnutý , 1 = zapnutý</td>
               </tr>
               <tr>
                 <td>offlineFriends</td>
                 <td>Ukazovnání přítel, které jsou offline</td>
-                <td>0,1</td>
+                <td>0 = vypnutý , 1 = zapnutý</td>
               </tr>
               <tr>
                 <td>showToastWindow</td>
                 <td>Ukazování toast notifikací</td>
-                <td>0,1</td>
+                <td>0 = vypnutý , 1 = zapnutý</td>
               </tr>
               <tr>
                 <td>actionbars</td>
@@ -337,32 +349,32 @@
               <tr>
                 <td>bottomLeftBar</td>
                 <td>Zobrazení levého spodního baru</td>
-                <td>0,1</td>
+                <td>0 = vypnutý , 1 = zapnutý</td>
               </tr>
               <tr>
                 <td>bottomRightBar</td>
                 <td>Zobrazení pravého spodního baru</td>
-                <td>0,1</td>
+                <td>0 = vypnutý , 1 = zapnutý</td>
               </tr>
               <tr>
                 <td>rightBar</td>
                 <td>Zobrazení pravého prvního baru</td>
-                <td>0,1</td>
+                <td>0 = vypnutý , 1 = zapnutý</td>
               </tr>
               <tr>
                 <td>rightBar2</td>
                 <td>Zobrazení pravého druhého baru</td>
-                <td>0,1</td>
+                <td>0 = vypnutý , 1 = zapnutý</td>
               </tr>
               <tr>
                 <td>lockActionbars</td>
                 <td>Uzamčení actionbars</td>
-                <td>0,1</td>
+                <td>0 = vypnutý , 1 = zapnutý</td>
               </tr>
               <tr>
                 <td>showNumbersForCooldowns</td>
                 <td>Zobrazení čísel, označující dobu do konce obnovy schopnosti</td>
-                <td>0,1</td>
+                <td>0 = vypnutý , 1 = zapnutý</td>
               </tr>
               <tr>
                 <td>keyBindings</td>
@@ -493,7 +505,14 @@
       <section id="popisTransformace">
         <article>
           <h2>Popis transformace</h2>
-          <p> blabla
+          <p>
+          Moje transformace spočívá v tom, že pomocí for-each zjistím, které addony 
+          jsou právě zapnuté a výsledek převedu do JSON. 
+          Jestli je addon zapnutý zjistím tak, že vezmu element active a porovnám ho s 1. 
+          Pokud je roven jedné, addon je zapnutý. 
+          Výsledek si zároveň seřadím podle názvu addonu od A do Z. Dále ověřuji, 
+          zdali je záznam poslední. Pokud není, přidám "," mezi jednotlivé záznamy.
+          Za posledním "," nebude.
           </p>
         </article>
       </section>
@@ -503,7 +522,8 @@
           <p>
           Při zpracování tohoto projektu jsem si osvojil práci s jazykem XML, který je velmi populární a rozšířený.
           Jeho znalosti mi velmi prospějí. <br />
-          Pokud bych měl dělat kompletní nastavení hry v XML, určitě by bylo potřeba jej lépe zpracovat a jinak ošetřit.
+          Pokud bych měl dělat kompletní nastavení hry v XML, určitě by bylo potřeba jej lépe zpracovat 
+          a jinak ošetřit.
           </p>
         </article>
       </section>
